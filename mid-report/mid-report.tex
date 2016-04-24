@@ -1,0 +1,98 @@
+\documentclass[dvips,11pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+%\usepackage{url}
+\usepackage{titling}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage[hyphens]{url}
+
+
+
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+\setlength{\droptitle}{-8em}   % This is your set screw
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+	right=20mm,
+	bottom=20mm,
+}
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{Cmpe 462 Final Project\\Movie Recommendation\\Midway Report}
+\author{Mustafa Onur Eken}
+\date{\today}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+
+
+\maketitle
+\section{Plan, Progress \& Future Work}
+
+In this project we aim to attack the problem of item recommendation to customers with latent factor approach. We are going to factorize the given data matrix to actualize the latent factor approach. There are several different methods to achieve such a decomposition. In particular, we are going to implement this factorization via 1) \textit{Stochastic Gradient Descent} \cite{yehuda} and 2) \textit{Singular Value Decomposition} \cite{sarwar}. Afterwards we are going to compare performances of these two approaches. In addition, we are going to expand our latent factor model by taking user and item specific biases into account as described in \cite{yehuda}. The plan is as follows:
+
+\begin{enumerate}
+	\itemsep 0em
+	\item Generate synthetic training and test data.
+	\item Assume the basic model (no regularization, no user, item biases), implement SGD algorithm for factorization.
+	\item Test the algorithm on synthetic data
+	\item Read the actual \textit{MovieLens} data (N = 100,000 where 80\% training, 20\% test).
+	\item Test the algorithm on \textit{MovieLens} data.
+	\item Assume the basic model (no regularization, no user, item biases), implement SVD algorithm \cite{sarwar} for factorization.
+	\item Test the algorithm on synthetic data.
+	\item Test the algorithm on \textit{MovieLens }data.
+	\item Expand the model by adding regularization terms and biases associated with users, items. Alter the algorithms accordingly.
+	\item Test on synthetic and \textit{MovieLens }data.
+	\item Do comparison plots.	
+\end{enumerate}
+Steps [1-5] are currently completed, we are having an issue with the convergence of SGD though. According to our observation when data size grows larger a much more delicate choice of learning rate is needed. Some intuitively guessed values of learning rate, seem not to work well since each of them have been stuck at a different error level due to oscillation. For solving this problem we are going to implement \textit{momentum update} or \textit{adaptive learning rate} \cite{alpaydin}. After tackling this problem, we are going to implement an algorithm for computing SVD \cite{sarwar} and follow the remaining steps in order. See the \textit{github} repository if interested in the code further, \url{https://github.com/oeken/cathar}.
+
+\begin{thebibliography}{9}
+	\bibitem{yehuda}
+	Yehuda Koren and Robert Bell and Chris Volinsky.
+	\textit{Matrix Factorization Techniques For Recommender Systems, 2009.}
+
+	\bibitem{sarwar}
+	Sarwar, Badrul and Karypis, George and Konstan, Joseph and Riedl, John.
+	\textit{Application of dimensionality reduction in recommender system-a case study, 
+	2000,}
+	DTIC Document.
+	
+	\bibitem{alpaydin}
+	Alpaydin, Ethem.
+	Introduction to machine learning,
+	2014,
+	MIT press.
+\end{thebibliography}
+
+%\bibliography{refs}
+%\bibliographystyle{unsrt}
+
+
+
+\end{document}
