@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{koren}
+Yehuda Koren, Robert Bell, and Chris Volinsky.
+\newblock Matrix factorization techniques for recommender systems, 2009.
+
+\bibitem{mnih}
+Ruslan Salakhutdinov and Andriy Mnih.
+\newblock Probabilistic matrix factorization.
+\newblock Citeseer, 2011.
+
+\end{thebibliography}
