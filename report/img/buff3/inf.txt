@@ -1,0 +1,20 @@
+Data: Toy
+Size: Full
+
+SGD Acc: 0.001
+ALS Acc: 0.001
+
+SGD Elapsed: 0.054149
+ALS Elapsed: 0.040892
+
+Latent Factors: 1
+
+Error Type: mse
+SGD Error: 1.99
+ALS Error: 1.98
+SVD Error: 1.98
+
+SGD Model: Simple
+ALS Model: Simple
+
+

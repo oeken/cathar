@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{svg}
+
+
+
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+%\setlength{\oddsidemargin}{0.25in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\topmargin}{0in}
+%\setlength{\textheight}{8.5in}
+\setlength{\columnsep}{10mm}
+\setlength{\droptitle}{-7em}   % This is your set screw
+\graphicspath{{img/}}
+%\onehalfspacing
+
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=30mm,
+	right=25mm,
+	bottom=35mm,
+}
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{\huge \textbf{Movie Recommendation\\ Using Latent Factor Models}}
+\author{\Large Mustafa Onur Eken\\[1mm] Bogazici University - CmpE 462}
+\date{\today}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+\maketitle
+\begin{centering}
+	\section*{\large Abstract}
+	\textit{\lipsum[1]}	
+\end{centering}
+\vspace{10mm}
+
+
+\begin{multicols}{2}
+	
+	\section{Introduction}
+	\lipsum[1]
+	
+	
+
+	
+	\section{Approach}
+	\lipsum[1]
+	\begin{figure*}[!ht]
+		\centering
+		\includegraphics[width=1.7\columnwidth]{user_sgd}
+		\caption{djlaskjda}
+		\label{1}
+	\end{figure*}
+	\begin{figure*}[!ht]
+		\centering
+		\includegraphics[width=1.7\columnwidth]{user_als}
+		\caption{djlaskjda}
+		\label{2}
+	\end{figure*}
+	\begin{figure*}[!ht]
+		\centering
+		\includegraphics[width=1.7\columnwidth]{mov_sgd}
+		\caption{djlaskjda}
+		\label{3}
+	\end{figure*}
+	\begin{figure*}[!ht]
+		\centering
+		\includegraphics[width=1.7\columnwidth]{mov_als}
+		\caption{djlaskjda}
+		\label{4}
+	\end{figure*}
+	
+	
+	
+	
+	\section{Results \& Discussion}
+	\lipsum[1]
+	\section{Conclusion}
+	\lipsum[1]
+	a sitasyon \cite{mnih}
+	
+	\bibliography{refs}
+	\bibliographystyle{unsrt}
+\end{multicols}
+
+
+\newpage
+
+\section{Appendices}
+	\lipsum[1]
+
+	\begin{figure}[!ht]
+		\centering		
+		\includegraphics[width=0.45\columnwidth]{mse_sgd}
+		\includegraphics[width=0.45\columnwidth]{mse_als}
+		\caption{dasjkda}
+		\label{5}		
+	\end{figure}
+
+
+
+\end{document}

@@ -1,0 +1,20 @@
+Data: Toy
+Size: Full (Cluster)
+
+SGD Acc: 0.001
+ALS Acc: 0.001
+
+SGD eta = 0.01
+SGD Elapsed: 0.1093
+ALS Elapsed: 0.0525
+
+Latent Factors: 2
+
+Error Type: mse
+SGD Error: 0.57
+ALS Error: 0.57
+SVD Error: 0.57 
+
+SGD Model: Simple
+ALS Model: Simple
+

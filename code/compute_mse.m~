@@ -1,0 +1,11 @@
+function e = compute_error(R_hat, R, method)
+    if nargin == 3
+       R_hat = varargin{1} * varargin{2}';
+    else
+       R_hat = varargin{1};
+    end
+    R = varargin{end};
+    E = R - R_hat;
+    E_vec = E(:);
+    e = nanmean(E_vec.^2);           
+end
