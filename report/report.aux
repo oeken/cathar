@@ -1,22 +1,84 @@
 \relax 
 \providecommand{\transparent@use}[1]{}
+\citation{mnih}
+\citation{koren}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Approach}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces djlaskjda\relax }}{2}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{1}{{1}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results \& Discussion}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{2}}
-\citation{mnih}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data}{1}}
+\citation{koren}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}SGD}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Plain}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Plain + Regularization}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Plain + Biases}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4}Plain + Regularization + Biases}{2}}
+\citation{koren}
 \bibdata{refs}
 \bibcite{mnih}{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}ALS}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results \& Discussion}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{3}}
+\bibcite{koren}{2}
 \bibstyle{unsrt}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces djlaskjda\relax }}{3}}
-\newlabel{2}{{2}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces djlaskjda\relax }}{4}}
-\newlabel{3}{{3}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Appendices}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces djlaskjda\relax }}{5}}
-\newlabel{4}{{4}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces dasjkda\relax }}{5}}
-\newlabel{5}{{5}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The toy data we hand crafted. Movies and users are chacterized as funny or serious. The ratings are given accordingly with a slight noise. This is the input data used to generate plots [2-3].\relax }}{4}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{1}{{1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Toy data clustering illustration. No missing entries in the rating matrix. Number of latent factors is 2. Solved with SVD. This is the latent factor values for all movies. Two clusters are present as expected.\relax }}{5}}
+\newlabel{4}{{2}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Toy data clustering illustration. No missing entries in the rating matrix. Number of latent factors is 2. Solved with SVD. This is the latent factor values for all users. Two clusters are present as expected.\relax }}{5}}
+\newlabel{7}{{3}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The toy data we hand crafted. Movies and users are chacterized as funny or serious. The ratings are given accordingly with a slight noise. Some entries are hidden. This is the input data used to generate plots [5-18].\relax }}{6}}
+\newlabel{5}{{4}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 2. Trained with SGD, used plain model. This is the latent factor values for all movies. Two clusters are present as expected. The amount of data is enough to spot the patterns.\relax }}{6}}
+\newlabel{5}{{5}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 2. Trained with ALS, used plain model. This is the latent factor values for all movies. Two clusters are present as expected. The amount of data is enough to spot the patterns. Notice that we cannot call Matlab's \textbf  {svd()} because there are missing entries.\relax }}{7}}
+\newlabel{5}{{6}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 2. Trained with SGD, used plain model. This is the latent factor values for all users. Two clusters are present as expected. The amount of data is enough to spot the patterns.\relax }}{7}}
+\newlabel{5}{{7}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 2. Trained with ALS, used plain model. This is the latent factor values for all users. Two clusters are present as expected. The amount of data is enough to spot the patterns.\relax }}{8}}
+\newlabel{5}{{8}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Toy data illustration. Half of the entries are missing in the rating matrix. Plot of mean square error versus epoch using SGD. Where epoch is one iteration through whole dataset. Notice that a larger learning rate might have cause an oscillation at the error level of 2. Time elapsed: 0.1603 sec\relax }}{8}}
+\newlabel{5}{{9}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Toy data illustration. Half of the entries are missing in the rating matrix. Plot of mean square error versus iteration. One iteration is defined as solving least squares once both for $U$ and $I_T$. Time elapsed: 0.0313 sec. Converges faster than SGD. As expected, ALS has good performance when the data is not sparse.\relax }}{9}}
+\newlabel{5}{{10}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 1. Trained with SGD, used plain model. This is the latent factor values for all movies. No clusters can be spotted in spite of the case where number of latent factors were two. This points out that one factor is too small to capture the characteristics.\relax }}{9}}
+\newlabel{5}{{11}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 1. Trained with ALS, used plain model. This is the latent factor values for all movies. No clusters can be spotted in spite of the case where number of latent factors were two. This points out that one factor is too small to capture the characteristics.\relax }}{10}}
+\newlabel{5}{{12}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 1. Trained with SGD, used plain model. This is the latent factor values for all users. No clusters can be spotted in spite of the case where number of latent factors were two. This points out that one factor is too small to capture the characteristics.\relax }}{10}}
+\newlabel{5}{{13}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Toy data clustring illustration. Half of the entries are missing in the rating matrix. Number of latent factors is 1. Trained with ALS, used plain model. This is the latent factor values for all movies. No clusters can be spotted in spite of the case where number of latent factors were two. This points out that one factor is too small to capture the characteristics.\relax }}{11}}
+\newlabel{5}{{14}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Toy data illustration. Half of the entries are missing in the rating matrix. Plot of mean square error versus epoch using SGD. Where epoch is one iteration through whole dataset. Time elapsed: 0.0541 sec\relax }}{11}}
+\newlabel{5}{{15}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Toy data illustration. Half of the entries are missing in the rating matrix. Plot of mean square error versus iteration. One iteration is defined as solving least squares once both for $U$ and $I_T$. Time elapsed: 0.0408 sec. Converges faster than SGD. As expected, ALS has good performance when the data is not sparse.\relax }}{12}}
+\newlabel{5}{{16}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Toy data illustration. Half of the entries are missing in the rating matrix. This plot demonstrates how error on training (blue) and test (red) data changes according to number of latent factors when the model is trained with SGD. \relax }}{12}}
+\newlabel{5}{{17}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Toy data illustration. Half of the entries are missing in the rating matrix. This plot demonstrates how error on training (blue) and test (red) data changes according to number of latent factors when the model is trained with ALS. \relax }}{13}}
+\newlabel{5}{{18}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces MovieLens data clustering illustration. Number of latent factors is 2. Trained with SGD, used plain model. This is the latent factor values for all 1682 movies. No clusters can be spotted. This points out that 2 factors are too small to capture the characteristics.\relax }}{13}}
+\newlabel{5}{{19}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces MovieLens data clustering illustration. Number of latent factors is 3. Trained with SGD, used plain model. This is the latent factor values for all 1682 movies. No clusters can be spotted. This points out that 3 factors are too small to capture the characteristics.\relax }}{14}}
+\newlabel{5}{{20}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces MovieLens data clustering illustration. Number of latent factors is 2. Trained with SGD, used plain model. This is the latent factor values for all 943 users. No clusters can be spotted. This points out that 2 factors are too small to capture the characteristics.\relax }}{14}}
+\newlabel{5}{{21}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces MovieLens data clustering illustration. Number of latent factors is 3. Trained with SGD, used plain model. This is the latent factor values for all 943 users. No clusters can be spotted. This points out that 3 factors are too small to capture the characteristics.\relax }}{15}}
+\newlabel{5}{{22}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces MovieLens data illustration. Plot of root mean square errors versus epochs using SGD, used plain model. Where epoch is one iteration through whole dataset.\relax }}{15}}
+\newlabel{5}{{23}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces MovieLens data illustration. This plot demonstrates how error on training (blue) and test (red) data changes according to number of latent factors when the model is trained with SGD. \relax }}{16}}
+\newlabel{5}{{24}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces MovieLens data illustration. Table of root mean square errors on training and test data according to chosen number of latent factor [1-10], regularization coefficient [0.0-0.6] and bias condition {0,1}. When bias is set on the bias terms \textit  {(described in "Approach" section)} are included in the training of the model and vice versa. Bias terms in the model indicate a slight enhancement.\relax }}{16}}
+\newlabel{5}{{25}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces In this table we show the estimated ratings for favourite (rated five stars) and disliked (rated one star) movies of a random user. Index rows contain movie ids rather than names.\relax }}{17}}
+\newlabel{5}{{26}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces In this table \textbf  {Unkown Disliked} column contains the movies given one star by a random user. They are \textit  {unkown} to system becuse movies are from test set. Similarly, \textbf  {Unknown Liked} column contains the movies given five stars by that user. \textbf  {Recommended} column contains the movies that we estimated highest ratings for. In like manner, \textbf  {Unrecommended} column contains the movies that we estimated lowest ratings for.\relax }}{17}}
+\newlabel{5}{{27}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Appendices}{18}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/script\textunderscore 1.m}{18}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/sgd.m}{21}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/als.m}{23}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/has\textunderscore converged.m}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/compute\textunderscore error.m}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/to\textunderscore instances.m}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{../code/to\textunderscore matrix.m}{24}}
